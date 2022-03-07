@@ -36,9 +36,7 @@ img_gen = ImageDataGenerator(rescale = 1/255)
 train_data = img_gen.flow_from_directory(train_path, batch_size=20, class_mode="binary", target_size=(150,150))
 val_data = img_gen.flow_from_directory(val_path, batch_size=20, class_mode="binary", target_size=(150,150))
 
-from tensorflow.python.ops.gen_nn_ops import MaxPool
 # Defining the model to classify our images
-import tensorflow as tf
 from tensorflow import keras
 
 model = keras.models.Sequential([
@@ -58,7 +56,7 @@ model = keras.models.Sequential([
                       keras.layers.Dense(1, activation='sigmoid')
 ])
 
-model.summary()
+# model.summary()
 
 from tensorflow.keras.optimizers import RMSprop
 
@@ -74,7 +72,7 @@ history = model.fit(train_data,
 
 model.evaluate(val_data)
 
-for elem in val_data:
-  print(elem)
-  break
+# for elem in val_data:
+#   print(elem)
+#   break
 
