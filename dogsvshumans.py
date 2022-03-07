@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1A8AqzNWW-IdCH3WF140dBynbqno4Jsvr
 """
 
-!wget --no-check-certificate https://storage.googleapis.com/mledu-datasets/cats_and_dogs_filtered.zip
+# !wget --no-check-certificate https://storage.googleapis.com/mledu-datasets/cats_and_dogs_filtered.zip
 
 import zipfile
 
@@ -27,7 +27,6 @@ val_path = os.path.join(base_dir,"validation")
 
 # print(os.listdir(train_path))
 
-from IPython.core.display import Image
 # Getting the images labelled using ImageGenerator from keras
 
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
